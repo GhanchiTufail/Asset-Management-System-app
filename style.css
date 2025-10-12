@@ -1,0 +1,47 @@
+/*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: bisque;
+}
+
+header > .pheader {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 10px 30px 10px 50px; 
+}
+.logo {
+    width: 15%;
+    background-color: aquamarine;
+    align-content: center;
+    font-size: 1.5em;
+}
+.userinfo{
+    padding: 10px 30px 10px 100px;
+}
+.container{
+    display: flex;
+}
+
+.container > .first {
+    background-color: aqua;
+    width: 15%;
+}
+
+.container > .first > div{
+    margin: auto;
+    display: flex;
+}
+
+.container > .second {
+    margin: auto;
+    display: flex;
+}
+
+.container > .second > div{
+    border: 1px solid black;
+}*/
