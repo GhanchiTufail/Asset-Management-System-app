@@ -1,47 +1,116 @@
-/*{
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    background-color: bisque;
+    background-color: thistle;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
 }
 
-header > .pheader {
-    background-color: blue;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* padding: 10px 30px 10px 50px; 
-}
-.logo {
-    width: 15%;
-    background-color: aquamarine;
-    align-content: center;
-    font-size: 1.5em;
-}
-.userinfo{
-    padding: 10px 30px 10px 100px;
-}
 .container{
     display: flex;
+    width: 100%;
 }
 
-.container > .first {
-    background-color: aqua;
-    width: 15%;
-}
-
-.container > .first > div{
-    margin: auto;
+.sidebar{
+    width: 220px;
+    background-color: blanchedalmond;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
 }
 
-.container > .second {
-    margin: auto;
+.sidebar > div{
+    text-align: center;
+    cursor: pointer;
+}
+
+.logo{
+    font-size: 58px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.list{
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.list:hover{
+    color: brown;
+    transform: scale(1.25);
+
+}
+
+.main{
+    width: 100%;
+    margin: 20px;
+}
+
+.template-grid-header,.template-grid{
+    margin: 20px;
+}
+
+.template-grid-header{
+    font-size: 30px;
+}
+
+.template-grid{
+    margin: 50px;
+    padding: 10px;
+    /* justify-content: sp; */
+}
+
+.header-grid{
     display: flex;
+    /* gap: 135px; */
+    justify-content: space-around;
+    margin-bottom: 10px;
 }
 
-.container > .second > div{
-    border: 1px solid black;
-}*/
+.child-grid{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.func{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.create-template{
+    align-content: center;
+    padding-right: 10px;
+}
+
+.create-template-button{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+}
+
+#templateSearch{
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    outline: none;
+}
+/* 
+div{
+    border: 1px solid;
+} */
+
+.func{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: -30px;
+}

@@ -9,38 +9,53 @@
 </head>
 
 <body>
-    <header>
-        <div class="pheader">
-            <div class="left-nav">
-                <div class="logo">ASM</div>
+    <div class="container">
+
+        <div class="sidebar">
+            <div class="logo">AMS</div>
+            <div class="list users">Users</div>
+            <div class="list access">Access</div>
+            <div class="list template">Templates</div>
+            <div class="list asset">Assets</div>
+        </div>
+
+        <div class="main">
+            <div class="template-grid-header">TEMPLATE MASTER</div>
+            <div class="func">
+                <div class="search-template search">
+                    <input type="text" name="template" id="templateSearch" placeholder="  search...">
+                    <!-- <div class="create-template-div-button"> -->
+                        
+                    <!-- </div> -->
+                </div>
+                <div class="create-template create">
+                    
+                    <button class="create-template-button">+</button>
+                </div>
             </div>
-            <div class="right-nav">
-                <div class="about">About</div>
-                <div class="services">services</div>
-                <div class="userinfo"><strong>Admin</strong><em>(admin)</em></div>
+            <div class="template-grid">
+
+                <div class="header-grid">
+                    <div class="grid srno">SR NO.</div>
+                    <div class="grid name">TEMPLATE NAME</div>
+                    <div class="grid asset-type">ASSET TYPE</div>
+                    <div class="grid version">VERSION</div>
+                    <div class="grid status">STATUS</div>
+                    <div class="grid action">ACTION</div>
+                </div>
+
+                <div class="child-grid">
+                    <div class="grid srno">SR NO.</div>
+                    <div class="grid name">TEMPLATE NAME</div>
+                    <div class="grid asset-type">ASSET TYPE</div>
+                    <div class="grid version">VERSION</div>
+                    <div class="grid status">STATUS</div>
+                    <div class="grid action">ACTION</div>
+                </div>
             </div>
         </div>
-    </header>
-    <!-- <div class="container">
-        <div class="first">
-            <div class="template">Template</div>
-            <div class="asset">Asset</div>
-        </div>
-        <div class="second">
-            <div class="sr">SR NO.</div>
-            <div class="templatename">Template Name</div>
-            <div class="assettype">Asset Type</div>
-            <div class="templateversion">Version</div>
-            <div class="templateaction">Action</div>
-        </div>
-        <div class="third" id="assetList">
-            <div class="sr">SR NO.</div>
-            <div class="assetnumber">Asset Number</div>
-            <div class="templatename">Template Name</div>
-            <div class="assettype">Asset Type</div>
-            <div class="templateaction">Action</div>
-        </div>
-    </div> -->
+
+    </div>
 </body>
 <script src="script.js"></script>
 
