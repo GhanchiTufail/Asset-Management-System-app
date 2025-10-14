@@ -44,19 +44,54 @@
                     <div class="grid action">ACTION</div>
                 </div>
 
-                <div class="child-grid">
-                    <div class="grid srno">SR NO.</div>
-                    <div class="grid name">TEMPLATE NAME</div>
-                    <div class="grid asset-type">ASSET TYPE</div>
-                    <div class="grid version">VERSION</div>
-                    <div class="grid status">STATUS</div>
-                    <div class="grid action">ACTION</div>
+                <div class="row">
                 </div>
             </div>
         </div>
 
     </div>
 </body>
-<script src="script.js"></script>
+<script>
+    let data = [
+        {id : 1,templateName : "Computer",assetType : "Desktop",version : 1,status : true,action : "yes"},
+        {id : 2,templateName : "Computer",assetType : "Desktop",version : 1,status : true,action : "yes"},
+        {id : 3,templateName : "Computer",assetType : "Desktop",version : 1,status : true,action : "yes"}
+    ]
+
+    const rowsContainer = document.querySelector(".template-grid .row");
+
+    data.forEach(item => {
+        const childgrid = document.createElement("div");
+        childgrid.classList.add("child-grid");
+
+        const childid = document.createElement("div");
+        childid.classList.add("grid","srno");
+        childid.textContent = item.id;
+
+        const childname = document.createElement("div");
+        childname.classList.add("grid","name");
+        childname.textContent = item.templateName;
+        
+        const childasset = document.createElement("div");
+        childasset.classList.add("grid","asset");
+        childasset.textContent = item.assetType;
+        
+        const childversion = document.createElement("div");
+        childversion.classList.add("grid","version");
+        childversion.textContent = item.version;
+        
+        const childstatus = document.createElement("div");
+        childstatus.classList.add("grid","status");
+        childstatus.textContent = item.status;
+        
+        const childaction = document.createElement("div");
+        childaction.classList.add("grid","action");
+        childaction.textContent = item.action;
+
+        childgrid.append(childid,childname,childasset,childversion,childstatus,childaction);
+
+        rowsContainer.append(childgrid);
+    })
+</script>
 
 </html>
