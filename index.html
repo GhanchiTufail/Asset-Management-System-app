@@ -25,12 +25,12 @@
                 <div class="search-template search">
                     <input type="text" name="template" id="templateSearch" placeholder="  search...">
                     <!-- <div class="create-template-div-button"> -->
-                        
+
                     <!-- </div> -->
                 </div>
                 <div class="create-template create">
-                    
-                    <button class="create-template-button">+</button>
+
+                    <button class="create-template-button" id="createbtn" onclick="onCreateClick()">+</button>
                 </div>
             </div>
             <div class="template-grid">
@@ -40,8 +40,8 @@
                     <div class="grid name">TEMPLATE NAME</div>
                     <div class="grid asset-type">ASSET TYPE</div>
                     <div class="grid version">VERSION</div>
-                    <div class="grid status">STATUS</div>
-                    <div class="grid action">ACTION</div>
+                    <!-- <div class="grid status">STATUS</div>
+                    <div class="grid action">ACTION</div> -->
                 </div>
 
                 <div class="row">
@@ -50,12 +50,48 @@
         </div>
 
     </div>
+
+    <div class="templateform" id="tempform">
+        <form method="post">
+            <div class="temp templatename">
+                <label for="Name">Template Name</label>
+                <input type="text" name="templatenamelabel" id="templatenamelabel">
+            </div>
+
+            <div class="temp templatename">
+                <label for="Asset">Asset Type</label>
+                <input type="text" name="assettypelabel" id="assettypelabel">
+            </div>
+
+            <div class="temp templatename">
+                <label for="version">version</label>
+                <input type="number" name="versionlabel" id="versionlabel">
+            </div>
+
+            <div class="temp templatename">
+                <label for="version">version</label>
+                <input type="number" name="versionlabel" id="versionlabel">
+            </div>
+        </form>
+    </div>
 </body>
 <script>
     let data = [
-        {id : 1,templateName : "Computer",assetType : "Desktop",version : 1,status : true,action : "yes"},
-        {id : 2,templateName : "Computer",assetType : "Desktop",version : 1,status : true,action : "yes"},
-        {id : 3,templateName : "Computer",assetType : "Desktop",version : 1,status : true,action : "yes"}
+        { id: 1, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 2, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 3, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 4, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 5, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 6, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 7, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 8, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 9, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 10, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 11, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 12, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 13, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 14, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" },
+        { id: 15, templateName: "Computer", assetType: "Desktop", version: 1, status: true, action: "yes" }
     ]
 
     const rowsContainer = document.querySelector(".template-grid .row");
@@ -65,33 +101,37 @@
         childgrid.classList.add("child-grid");
 
         const childid = document.createElement("div");
-        childid.classList.add("grid","srno");
+        childid.classList.add("grid", "srno");
         childid.textContent = item.id;
 
         const childname = document.createElement("div");
-        childname.classList.add("grid","name");
+        childname.classList.add("grid", "name");
         childname.textContent = item.templateName;
-        
-        const childasset = document.createElement("div");
-        childasset.classList.add("grid","asset");
-        childasset.textContent = item.assetType;
-        
-        const childversion = document.createElement("div");
-        childversion.classList.add("grid","version");
-        childversion.textContent = item.version;
-        
-        const childstatus = document.createElement("div");
-        childstatus.classList.add("grid","status");
-        childstatus.textContent = item.status;
-        
-        const childaction = document.createElement("div");
-        childaction.classList.add("grid","action");
-        childaction.textContent = item.action;
 
-        childgrid.append(childid,childname,childasset,childversion,childstatus,childaction);
+        const childasset = document.createElement("div");
+        childasset.classList.add("grid", "asset");
+        childasset.textContent = item.assetType;
+
+        const childversion = document.createElement("div");
+        childversion.classList.add("grid", "version");
+        childversion.textContent = item.version;
+
+        // const childstatus = document.createElement("div");
+        // childstatus.classList.add("grid","status");
+        // childstatus.textContent = item.status;
+
+        // const childaction = document.createElement("div");
+        // childaction.classList.add("grid","action");
+        // childaction.textContent = item.action;
+
+        childgrid.append(childid, childname, childasset, childversion);
 
         rowsContainer.append(childgrid);
     })
+
+    function onCreateClick(){
+        document.getElementById("tempform").style.display = "flex";
+    }
 </script>
 
 </html>
