@@ -55,16 +55,21 @@
         <form method="post">
             <div class="temp templatename">
                 <label for="Name">Template Name</label>
+            </div>
+            <div class="templabel templatenamelabel">
                 <input type="text" name="templatenamelabel" id="templatenamelabel">
             </div>
 
             <div class="temp templatename">
                 <label for="Asset">Asset Type</label>
+            </div>
+            <div class="templabel assettypelabel">
                 <input type="text" name="assettypelabel" id="assettypelabel">
             </div>
 
             <div class="temp templatename">
                 <label for="version">version</label>
+
                 <input type="number" name="versionlabel" id="versionlabel">
             </div>
 
@@ -129,7 +134,7 @@
         rowsContainer.append(childgrid);
     })
 
-    function onCreateClick(){
+    function onCreateClick() {
         document.getElementById("tempform").style.display = "flex";
     }
 </script>
