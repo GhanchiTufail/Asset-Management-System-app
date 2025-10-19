@@ -1,0 +1,26 @@
+
+
+.sidebar{
+    width: 20vw;
+    background-color: #4A5C89;
+    padding: 20px;
+    height: 100vh;
+    padding-top: 60px;
+    font-size: 20px;
+    color: #D3DFFF;
+    
+}
+
+li{
+    padding-left: 40px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    transition-duration: .5s;
+}
+
+li:hover{
+    font-weight: 600;
+    color: white;
+    transition-duration: .5s;
+    cursor: pointer;
+}
